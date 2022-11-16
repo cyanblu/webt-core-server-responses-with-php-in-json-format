@@ -16,6 +16,6 @@ class Soundtrack implements JsonSerializable{
             'name' => $this->name,
             'band' => $this->band,
             'keks' => 'ein keks'
-        )
+        );
     }
 }
