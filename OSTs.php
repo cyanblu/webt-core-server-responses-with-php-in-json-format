@@ -2,17 +2,28 @@
 
 header('Content-Type: application/json; charset=utf-8');
 
-class OSTs
+class OSTs implements JsonSerializable
 {
+    public string $id;
     public string $name;
-    public string $band;
+    public string $videoGameName;
 
-    function __construct(string $name, string $band)
+    function __construct(string $id, string $name, string $videoGameName)
     {
+        $this->id = $id;
         $this->name = $name;
-        $this->band = $name;
+        $this->videoGameName = $videoGameName;
+    }
+
+    public function jsonSerialize()
+    {
+        // TODO: Implement jsonSerialize() method.git
+        return array(
+            'name'=>$this->name,
+            'band'=>$this->band
+        );
     }
 }
 
-$soundtrack = new OSTs("Raining Blood", "Slayer");
-echo json_encode($soundtrack);
+//$soundtrack = new OSTs("Raining Blood", "Slayer");
+//echo json_encode($soundtrack);
