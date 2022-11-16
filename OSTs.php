@@ -19,8 +19,9 @@ class OSTs implements JsonSerializable
     {
         // TODO: Implement jsonSerialize() method.git
         return array(
+            'id'=>$this->id,
             'name'=>$this->name,
-            'band'=>$this->band
+            'videoGameName'=>$this->videoGameName
         );
     }
 }
