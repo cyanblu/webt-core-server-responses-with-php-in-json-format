@@ -1,5 +1,6 @@
 <?php
 require_once "OSTs.php";
+require_once "Song.php";
 class Seeder
 {
     static function OSTsDatabank(){
