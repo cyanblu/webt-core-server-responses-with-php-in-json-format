@@ -19,6 +19,10 @@ class OSTs implements JsonSerializable
         $this->tracklist = $tracklist;
     }
 
+    public function getID() : string {
+        return $this->id;
+    }
+
     public function jsonSerialize()
     {
         // TODO: Implement jsonSerialize() method.git

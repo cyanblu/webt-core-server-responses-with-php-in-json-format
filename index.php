@@ -1,5 +1,7 @@
 <?php
 
+require_once "Seeder.php";
+
 header('Content-Type: application/json; charset=utf-8');
 
 class Soundtrack implements JsonSerializable{
@@ -18,5 +20,13 @@ class Soundtrack implements JsonSerializable{
             'keks' => 'ein keks'
         );
     }
+}
+
+$seeder = new Seeder();
+
+if(!isset($_GET["id"])){
+    echo json_encode($seeder->getOSTs());
+}else{
+    echo json_encode($seeder->getOSTs($_GET["id"]));
 }
 
