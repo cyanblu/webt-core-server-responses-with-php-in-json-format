@@ -35,6 +35,3 @@ class OSTs implements JsonSerializable
         );
     }
 }
-
-//$soundtrack = new OSTs("Raining Blood", "Slayer");
-//echo json_encode($soundtrack);
