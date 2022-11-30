@@ -4,11 +4,11 @@ header('Content-Type: application/json; charset=utf-8');
 
 class OSTs implements JsonSerializable
 {
-    public string $id;
-    public string $name;
-    public string $videoGameName;
-    public string $releaseYear;
-    public array $tracklist;
+    private string $id;
+    private string $name;
+    private string $videoGameName;
+    private string $releaseYear;
+    private array $tracklist;
 
     function __construct(string $id, string $name, string $videoGameName, string $releaseYear, array $tracklist)
     {

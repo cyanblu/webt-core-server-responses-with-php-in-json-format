@@ -2,11 +2,11 @@
 
 class song implements JsonSerializable
 {
-    public string $id;
-    public string $name;
-    public string $artist;
-    public string $tracknbr;
-    public string $duration;
+    private string $id;
+    private string $name;
+    private string $tracknbr;
+    private string $artist;
+    private string $duration;
 
     function __construct(string $id, string $name, string $artist, string $tracknbr, string $duration)
     {
